@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>거래처 정보 관리</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/motion.js" defer></script>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="wrap">
+        <div id="header_wrap">
+            <header id="header">
+                <h1><a href="file:///C:/Users/PPS/Desktop/forcetech/index.html#"><img src="images/force_tech.png"
+                            alt="포스텍 로고"></a></h1>
+                <nav>
+                    <ul class="gnb">
+                        <li>
+                            <h2><img src="images/1.png" alt="아이콘"><a href="#">기준정보관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="file:///C:/Users/PPS/Desktop/forcetech/sub1-1.html">거래처 정보 관리</a></li>
+                                <li><a href="#">품목 정보 관리</a></li>
+                                <li><a href="#">자재 정보 관리</a></li>
+                                <li><a href="#">제품 정보 관리</a></li>
+                                <li><a href="#">포장 정보 관리</a></li>
+                                <li><a href="#">부서 정보 관리</a></li>
+                                <li><a href="#">사용자 정보 관리</a></li>
+                                <li><a href="#">창고 정보 관리</a></li>
+                                <li><a href="#">설비 정보 관리</a></li>
+                                <li><a href="#">달력 정보 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/2.png" alt="아이콘"><a href="#">자재 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">자재 입고 관리</a></li>
+                                <li><a href="#">자재 출고 관리</a></li>
+                                <li><a href="#">자재 재고 현황</a></li>
+                                <li><a href="#">수불 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/3.png" alt="아이콘"><a href="#">생산 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">작업 지시 관리</a></li>
+                                <li><a href="#">작업 설비 관리</a></li>
+                                <li><a href="#">생산 실적 관리</a></li>
+                                <li><a href="#">생산 실적 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/4.png" alt="아이콘"><a href="#">공정 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">공정코드 관리</a></li>
+                                <li><a href="#">BOM 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/5.png" alt="아이콘"><a href="#">제품 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">입고 관리</a></li>
+                                <li><a href="#">출하 관리</a></li>
+                                <li><a href="#">재고 현황</a></li>
+                                <li><a href="#">수불 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/6.png" alt="아이콘"><a href="#">품질 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">완제품 QM 관리</a></li>
+                                <li><a href="#">검품현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/7.png" alt="아이콘"><a href="#">모니터링</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">설비실적</a></li>
+                                <li><a href="#">월별 설비 실적</a></li>
+                                <li><a href="#">작업자 실적</a></li>
+                                <li><a href="#">월별 작업자 실적</a></li>
+                                <li><a href="#">작업지시 현황</a></li>
+                                <li><a href="#">Lot Tracking</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/8.png" alt="아이콘"><a href="#">시스템 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">사용 시설</a></li>
+                                <li><a href="#">공지사항 관리</a></li>
+                                <li><a href="#">사용이력 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/9.png" alt="아이콘"><a href="#">문서 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">문서 리스트</a></li>
+                                <li><a href="#">문서 검색</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- 예지보전 이동 -->
+
+                </nav>
+            </header>
+
+            <footer id="footer">
+                <h2><a href="file:///C:/Users/PPS/Desktop/forcetech/predict_maint.html"><img src="images/move.button.png"alt="예지보전 이동 버튼"></a></h2>
+                <p><img src="images/footer.png" alt="pps로고 및 카피라이터"></p>
+            </footer>
+        </div>
+
+        <div class="body_wrap1">
+
+            <div class="top_bar1">
+                <p><a href="#"><img src="images/click_btn.png" alt="상단 펼침 버튼"></a></p>
+
+
+                <div class="user1">
+                    <p><img src="images/user.png" alt="유저아이콘"></p>
+                    <p><span>Logged in as</span><br><span>관리자</span></p>
+                    <p><a href="#"><img src="images/user_btn.png" alt=""></a></p>
+                </div>
+
+                <div class="clock1">
+                    <p>2024-09-10(화) 13:43:47</p>
+                </div>
+
+                <div class="drop_down1">
+                    <ul>
+                        <li><a href="#"><img src="images/drop_down1.png" alt="공통 정보관리">공통 정보관리</a></li>
+
+                        <li><a href="#"><img src="images/drop_down2.png" alt="로그아웃">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="container">
+                <div class="section">
+
+                    <div class="client_box">
+                        <div class="client">
+                            <ul>
+                                <li>거래처목록</li>
+                                <li>전체 211건</li>
+                            </ul>
+                            <button class="clientbtn">
+                                <span><img src="sub_images/Excel_icon.png" alt="엑셀아이콘"></span>
+                                <span>엑셀 다운로드</span>
+                            </button>
+
+                        </div>
+
+                        <div class="client_dropdown">
+                            <div class="client_box2">
+                                <select id="select-device">
+                                    <option value="apple">거래처 선택</option>
+                                    <option value="oppo">클린킹멜버튼</option>
+                                    <option value="xiaomi">패키징윅스</option>
+                                    <option value="apple">지인팩</option>
+                                    <option value="oppo">(주)에스에이치팩</option>
+                                    <option value="xiaomi">(주)큐담</option>
+                                </select>
+
+
+                                <div class="client_input">
+                                    <input type="text" id="phone-input" placeholder="전화번호">
+                                    <p><button><img src="sub_images/search.png" alt=""></button></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="table_box">
+
+                            <div class="table-container">
+                                <table>
+                                    <tr>
+                                        <td>업체구분</td>
+                                        <td>코드</td>
+                                        <td>거래처명</td>
+                                        <td>사업자번호</td>
+                                        <td>대표자</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container1">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container2">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container3">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container4">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container5">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container6">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container7">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container8">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container9">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container10">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container11">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container12">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container13">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container14">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container15">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container16">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container17">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container18">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container19">
+                                <table>
+                                    <tr>
+                                        <td>자재처</td>
+                                        <td>MCC02520240328000181</td>
+                                        <td>한국 델몬트 후레쉬 프로듀스(주)</td>
+                                        <td>416-46-00294</td>
+                                        <td>박정진(이상영으로 교체9월)</td>
+                                        <td>TEL</td>
+                                        <td>FAX</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="number">
+                            <ul class="number_list">
+                                <li><button type="button"><img src="sub_images/before_down.png" alt="이전단락"></button>
+                                </li>
+                                <li><button type="button"><img src="sub_images/before1_down.png" alt="이전"></button></li>
+                                <li><button type="button"><span>1</span></button></li>
+                                <li><button type="button"><span>2</span></button></li>
+                                <li><button type="button"><span>3</span></button></li>
+                                <li><button type="button"><span>4</span></button></li>
+                                <li><button type="button"><span>5</span></button></li>
+                                <li><button type="button"><span>6</span></button></li>
+                                <li><button type="button"><span>7</span></button></li>
+                                <li><button type="button"><span>8</span></button></li>
+                                <li><button type="button"><span>9</span></button></li>
+                                <li><button type="button"><span>10</span></button></li>
+                                <li><button type="button"><img src="sub_images/next.png" alt="다음"></button></li>
+                                <li><button type="button"><img src="sub_images/next1.png" alt="다음단락"></button></li>
+                            </ul>
+
+                            <select id="page_list">
+                                <option value="1">10</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">100</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="section2">
+                        <div class="bizinfo_box">
+                            <div class="bizinfo">
+                                <p>거래처 상세정보</p>
+
+                                <div class="bizinfobtn">
+                                    <button class="refresh-btn">새로고침</button>
+                                    <button class="save-btn">저장</button>
+                                    <button class="delete-btn">삭제</button>
+                                </div>
+
+                                <div class="bizinfobtn_box">
+
+                                    <div class="view">
+                                        <div class="label-1">거래처코드*</div>
+                                        <div class="input-wrapper">
+                                            <input type="text" placeholder="거래처코드 자동생성">
+                                        </div>
+                                    </div>
+
+                                    <!--거래처명,업체구분 flex 2,3-->
+                                    <div class="flex_box">
+                                        <div class="view-2">
+                                            <div class="label-2">거래처명</div>
+                                            <div class="input-wrapper2">
+                                                <input type="email" placeholder="거래처명을 입력하세요.">
+                                            </div>
+                                        </div>
+
+                                        <div class="view-3">
+                                            <div class="label-3">업체구분</div>
+                                            <select id="dropdown_list">
+                                                <option value="1">고객사</option>
+                                                <option value="2">자재처</option>
+                                                <option value="3">본사</option>
+                                                <option value="4">사출처</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <!--거래처명,업체구분 flex 3,4-->
+                                    <div class="flex_box2">
+                                        <div class="view-4">
+                                            <div class="label">대표자명</div>
+                                            <div class="input-wrapper4">
+                                                <input type="tel" placeholder="대표자명을 입력하세요.">
+                                            </div>
+                                        </div>
+
+                                        <div class="view-5">
+                                            <div class="label">사업자번호</div>
+                                            <div class="input-wrapper5">
+                                                <input type="tel" placeholder="사업자번호를 입력하세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="view-6">
+                                        <div class="label">주소1</div>
+                                        <div class="input-wrapper6">
+                                            <input type="text" placeholder="주소를 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="view-7">
+                                        <div class="label">주소2</div>
+                                        <div class="input-wrapper7">
+                                            <input type="text" placeholder="주소를 입력하세요.">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex_box3">
+                                        <div class="view-8">
+                                            <div class="label">담당자명</div>
+                                            <div class="input-wrapper8">
+                                                <input type="text" placeholder="담당자명을 입력하세요.">
+                                            </div>
+                                        </div>
+
+                                        <div class="view-9">
+                                            <div class="label required">팩스번호 *</div>
+                                            <div class="input-wrapper9">
+                                                <input type="text" placeholder="팩스번호를 입력하세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 10,11 -->
+                                    <div class="flex_box4">
+                                        <div class="view-10">
+                                            <div class="label">담당자연락처</div>
+                                            <div class="input-wrapper8">
+                                                <input type="text" placeholder="담당자연락처를 입력하세요.">
+                                            </div>
+                                        </div>
+
+                                        <div class="view-11">
+                                            <div class="label required">전화번호</div>
+                                            <div class="input-wrapper9">
+                                                <input type="text" placeholder="전화번호를 입력하세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 12,13 -->
+                                    <div class="flex_box4">
+                                        <div class="view-12">
+                                            <div class="label">EMAIL</div>
+                                            <div class="input-wrapper8">
+                                                <input type="text" placeholder="이메일을 입력하세요.">
+                                            </div>
+                                        </div>
+
+                                        <div class="view-13">
+                                            <div class="label required">비고</div>
+                                            <div class="input-wrapper9">
+                                                <input type="text" placeholder="비고를 입력하세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            </div>
+            </div>
+</body>
+
+
+</html>
