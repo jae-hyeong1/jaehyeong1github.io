@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>피피에스 예지보전 UI</title>
+    <link rel="stylesheet" type="text/css" href="css/predict_maint_style.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/motion.js" defer></script>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="wrap">
+        <header id="header">
+            <h1><a href="file:///C:/Users/PPS/Desktop/forcetech/index.html"><img src="predict_maint_images/logo.png" alt="포스텍 로고"></a></h1>
+            <div class="notif_wrap">
+                <div class="notif">
+                    <button class="notif-btn">
+                        <img src="predict_maint_images/notif.png" alt="알림"></button>
+                    <!-- 버튼 2 -->
+                    <button class="refresh-btn">
+                        <img src="predict_maint_images/refresh.png" alt="새로고침">
+                    </button>
+
+                    <!-- 드롭다운 버튼 1 -->
+                    <div class="dropdown">
+
+                        <button class="dropbtn">성형 1호기
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">성형 2호기</a>
+                        </div>
+                    </div>
+
+                    <!-- 드롭다운 버튼 2 -->
+                    <div class="dropdown">
+
+                        <button class="dropbtn">진동 센서 트렌드 차트
+                            <span class="arrow">&#9660;</span>
+                        </button>
+
+                        <div class="dropdown-content">
+                            <a href="#">환경 센서 트렌드 차트</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="container-box">
+            <p>환경 센서 정보</p>
+
+            <div class="box">
+                <div class="pm1-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/pm1-dust.png" alt="미세먼지 아이콘"><br>미세먼지</li>
+                        <li>22㎍/㎥</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="미세먼지 구분선"></li>
+                        <li>보통</li>
+                    </ul>
+                </div>
+
+                <div class="pm2-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/pm2-dust.png" alt="초미세먼지 아이콘"><br>초미세먼지</li>
+                        <li>16㎍/㎥</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="초미세먼지 구분선"></li>
+                        <li>나쁨</li>
+                    </ul>
+                </div>
+
+                <div class="pm3-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/pm3-dust.png" alt="극초미세먼지 아이콘"><br>극초미세먼지</li>
+                        <li>19㎍/㎥</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="극초미세먼지 구분선"></li>
+                        <li>좋음</li>
+                    </ul>
+                </div>
+
+                <div class="co2-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/co2.-dust.png" alt="이산화탄소 아이콘"><br>이산화탄소</li>
+                        <li>19㎍/㎥</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="이산화탄소 구분선"></li>
+                        <li>좋음</li>
+                    </ul>
+                </div>
+
+                <div class="voc-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/voc-dust.png" alt="유기화합물 아이콘"><br>유기화합물</li>
+                        <li>19㎍/㎥</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="유기화합물 구분선"></li>
+                        <li>좋음</li>
+                    </ul>
+                </div>
+
+                <div class="temp-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/temp-dust.png" alt="온도 아이콘"><br>온도</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="온도 구분선"></li>
+                        <li>26.2 ℃</li>
+                    </ul>
+                </div>
+
+                <div class="humid-dust">
+                    <ul>
+                        <li><img src="predict_maint_images/humid-dust.png" alt="습도 아이콘"><br>습도</li>
+                        <li><img src="predict_maint_images/pm_line.png" alt="습도 구분선"></li>
+                        <li>16%</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="box2">
+                <p>진동 센서 정보</p>
+
+                <div class="v-sensor-list">
+                    <div class="v-sensor">
+                        <ul>
+                            <li>RMS 속도<span>(mm/s)</span><br></li>
+                            <li>2.79</li>
+                        </ul>
+                        <img src="predict_maint_images/rms1.png" alt="RMS속도이미지">
+                    </div>
+
+                    <div class="v-sensor2">
+                        <ul>
+                            <li>RMS 가속도<span>(g)</span><br></li>
+                            <li>0.64</li>
+                        </ul>
+                        <img src="predict_maint_images/rms1.png" alt="RMS 가속도이미지">
+                    </div>
+
+                    <div class="v-sensor3">
+                        <ul>
+                            <li>첨도<span>(-)</span><br></li>
+                            <li>2.79</li>
+                        </ul>
+                        <img src="predict_maint_images/v-sensor3.png" alt="첨도이미지">
+                    </div>
+
+                    <div class="v-sensor4">
+                        <ul>
+                            <li>파고율<span>(-)</span><br></li>
+                            <li>2.33</li>
+                        </ul>
+                        <img src="predict_maint_images/v-sensor4.png" alt="파고율이미지">
+                    </div>
+
+                    <div class="v-sensor5">
+                        <ul>
+                            <li>모터 온도<span>(℃)</span><br></li>
+                            <li>32.00</li>
+                        </ul>
+                        <img src="predict_maint_images/v-sensor5.png" alt="모터온도이미지">
+                    </div>
+
+                    <div class="time">
+                        <ul>
+                            <li>2024년 08월 22일<br></li>
+                            <li>09:49:57</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="box3">
+
+                <div class="box3_chart">
+                    <ul>
+                        <li>진동 센서 트렌드 차트</li>
+                        <li><img src="predict_maint_images/fault.png" alt="">이상 감지</li>
+                        <li><img src="predict_maint_images/normal.png" alt="">이상 없음</li>  
+                    </ul>
+                </div>
+
+                <div class="chart_list">
+                    <ul class="chartbtn">
+                        <li><button><img src="predict_maint_images/normal.png" alt="RMS 속도 이상없음">RMS 속도</button></li>
+                        <li><button><img src="predict_maint_images/normal.png" alt="RMS 가속도 이상없음">RMS 가속도</button></li>
+                        <li><button><img src="predict_maint_images/fault.png" alt="첨도 이상없음">첨도</button></li>
+                        <li><button><img src="predict_maint_images/normal.png" alt="파고율 이상없음">파고율</button></li>
+                        <li><button><img src="predict_maint_images/normal.png" alt="모터 온도 이상없음">모터 온도</button></li>
+                    </ul>
+
+                    <div class="chart">
+                        <p><img src="predict_maint_images/chart.png" alt=""></p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
