@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>설비 생산 현황</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/sub_style.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/motion.js" defer></script>
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <div id="wrap">
+        <div id="header_wrap">
+            <header id="header">
+                <h1><a href="file:///C:/Users/PPS/Desktop/forcetech/index.html#"><img src="images/force_tech.png"
+                            alt="포스텍 로고"></a></h1>
+                <nav>
+                    <ul class="gnb">
+                        <li>
+                            <h2><img src="images/1.png" alt="아이콘"><a href="#">기준정보관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="file:///C:/Users/PPS/Desktop/forcetech/sub1-1.html">거래처 정보 관리</a></li>
+                                <li><a href="#">품목 정보 관리</a></li>
+                                <li><a href="#">자재 정보 관리</a></li>
+                                <li><a href="#">제품 정보 관리</a></li>
+                                <li><a href="#">포장 정보 관리</a></li>
+                                <li><a href="#">부서 정보 관리</a></li>
+                                <li><a href="#">사용자 정보 관리</a></li>
+                                <li><a href="#">창고 정보 관리</a></li>
+                                <li><a href="#">설비 정보 관리</a></li>
+                                <li><a href="#">달력 정보 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/2.png" alt="아이콘"><a href="#">자재 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">자재 입고 관리</a></li>
+                                <li><a href="#">자재 출고 관리</a></li>
+                                <li><a href="#">자재 재고 현황</a></li>
+                                <li><a href="#">수불 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/3.png" alt="아이콘"><a href="#">생산 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">작업 지시 관리</a></li>
+                                <li><a href="#">작업 설비 관리</a></li>
+                                <li><a href="#">생산 실적 관리</a></li>
+                                <li><a href="#">생산 실적 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/4.png" alt="아이콘"><a href="#">공정 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">공정코드 관리</a></li>
+                                <li><a href="#">BOM 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/5.png" alt="아이콘"><a href="#">제품 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">입고 관리</a></li>
+                                <li><a href="#">출하 관리</a></li>
+                                <li><a href="#">재고 현황</a></li>
+                                <li><a href="#">수불 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/6.png" alt="아이콘"><a href="#">품질 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">완제품 QM 관리</a></li>
+                                <li><a href="#">검품현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/7.png" alt="아이콘"><a href="#">모니터링</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">설비실적</a></li>
+                                <li><a href="#">월별 설비 실적</a></li>
+                                <li><a href="#">작업자 실적</a></li>
+                                <li><a href="#">월별 작업자 실적</a></li>
+                                <li><a href="#">작업지시 현황</a></li>
+                                <li><a href="#">Lot Tracking</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/8.png" alt="아이콘"><a href="#">시스템 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">사용 시설</a></li>
+                                <li><a href="#">공지사항 관리</a></li>
+                                <li><a href="#">사용이력 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><img src="images/9.png" alt="아이콘"><a href="#">문서 관리</a></h2>
+                            <ul class="submenu">
+                                <li><a href="#">문서 리스트</a></li>
+                                <li><a href="#">문서 검색</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- 예지보전 이동 -->
+                   
+                </nav>
+            </header>
+
+            <footer id="footer">
+                <h2><a href="file:///C:/Users/PPS/Desktop/forcetech/predict_maint.html"><img src="images/move.button.png" alt="예지보전 이동 버튼"></a></h2>
+                <p><img src="images/footer.png" alt="pps로고 및 카피라이터"></p>
+            </footer>
+        </div>
+
+
+        <div class="body_wrap">
+
+            <div class="top_bar">
+                <p><a href="#"><img src="images/click_btn.png" alt="상단 펼침 버튼"></a></p>
+
+
+                <div class="user">
+                    <p><img src="images/user.png" alt="유저아이콘"></p>
+                    <p><span>Logged in as</span><br><span>관리자</span></p>
+                    <p><a href="#"><img src="images/user_btn.png" alt="관리자 정보버튼"></a></p>
+                </div>
+
+                <div class="clock">
+                    <p>2024-09-10(화) 13:43:47</p>
+                </div>
+
+                <div class="drop_down">
+                    <ul>
+                        <li><a href="#"><img src="images/drop_down1.png" alt="공통 정보관리">공통 정보관리</a></li>
+                        <hr>
+                        <li><a href="#"><img src="images/drop_down2.png" alt="로그아웃">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--미세먼지(미세먼지,초미세먼지,극초미세먼지) -->
+            <div class="container">
+
+                <div class="contant1">
+                    <p>공장환경현황</p>
+
+                    <div class="list1">
+
+                        <ul class="pm">
+                            <li><span>미세먼지</span><br><span>보통 22㎍/㎥</span><br><span>좋음</span></li>
+                            <li><img src="images/pm_icon.png" alt="미세먼지 아이콘"></li>
+
+
+                        </ul>
+
+
+                        <ul class="pm2">
+                            <li><span>초미세먼지</span><br><span>보통 22㎍/㎥</span><br><span>좋음</span></li>
+                            <li><img src="images/pm2_icon.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+
+
+
+                        <ul class="pm3">
+                            <li><span>극초미세먼지</span><br><span>보통 22㎍/㎥</span><br><span>좋음</span></li>
+                            <li><img src="images/pm3_icon.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+
+
+
+                        <ul class="co2">
+                            <li><span>이산화탄소</span><br><span>479ppm</span><br><span>나쁨</span></li>
+                            <li><img src="images/co2.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+
+
+
+                        <ul class="voc">
+                            <li><span>유기화합물</span><br><span>0.127ppm</span><br><span>보통</span></li>
+                            <li><img src="images/voc.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+
+
+                        <ul class="temp">
+                            <li><span>온도</span><br><span>26.2°C</span><br></li>
+                            <li><img src="images/temp.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+
+
+
+                        <ul class="humid">
+                            <li><span>습도</span><br><span>18%</span></li>
+                            <li><img src="images/humid.png" alt="미세먼지 아이콘"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="live">
+                    <div class="contant2">
+                        <ul>
+                            <li>설비 생산현황</li>
+                            <li>실시간 상태현황</li>
+                        </ul>
+
+                        <div class="status">
+                            <div class="ok">
+                                <ul>
+                                    <li>정상</li>
+                                    <li><span>2</span></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="stop">
+                                <ul>
+                                    <li>정지</li>
+                                    <li>0</li>
+                                </ul>
+                            </div>
+
+                            <div class="err">
+                                <ul>
+                                    <li>통신이상</li>
+                                    <li>0</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-list">
+
+                    <div class="print">
+                        <p>인쇄기</p>
+
+                        <div class="print-list">
+
+                            <ul class="tid1">
+                                <li>작업지시번호</li>
+                                <li>20240503-GP-003</li>
+
+                            </ul>
+
+                            <ul class="pname1">
+                                <li>제품명</li>
+                                <li>GSP-155195-35<br>
+                                    (PP(백색)(0.55*745))</li>
+                            </ul>
+
+                            <ul class="qstatus1">
+                                <li>양품/불량</li>
+                                <li>1 / 0</li>
+                            </ul>
+
+                            <ul class="pinfo1">
+                                <li>생산계획 / 실적</li>
+                                <li>000.000 / 000.000</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="bending">
+                        <p>밴딩기</p>
+
+                        <div class="banding-list">
+
+                            <ul class="tid2">
+                                <li>작업지시번호</li>
+                                <li>20240503-GP-003</li>
+                            </ul>
+
+                            <ul class="pname2">
+                                <li>제품명</li>
+                                <li>GSP-155195-35<br>
+                                    (PP(백색)(0.55*745))</li>
+                            </ul>
+
+                            <ul class="qstatus2">
+                                <li>양품/불량</li>
+                                <li>1 / 0</li>
+                            </ul>
+
+                            <ul class="pinfo2">
+                                <li>생산계획 / 실적</li>
+                                <li>000.000 / 000.000</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="thomson">
+                        <p>톰슨기</p>
+
+                        <div class="thomson-list">
+
+                            <ul class="tid3">
+                                <li>작업지시번호</li>
+                                <li>20240503-GP-003</li>
+                            </ul>
+
+                            <ul class="pname3">
+                                <li>제품명</li>
+                                <li>GSP-155195-35<br>
+                                    (PP(백색)(0.55*745))</li>
+                            </ul>
+
+                            <ul class="qstatus3">
+                                <li>양품/불량</li>
+                                <li>1 / 0</li>
+                            </ul>
+
+                            <ul class="pinfo3">
+                                <li>생산계획 / 실적</li>
+                                <li>000.000 / 000.000</li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
